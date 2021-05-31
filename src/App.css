@@ -1,38 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.ToDoApp {
+  margin-top: 100px;
+  width: 500px !important;
+  width: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.AddToDo {
+  height: 30px;
+  padding: 20px 20px;
+  display: flex;
+  gap: 10px;
+  background-color: #333652;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.AddToDo > input {
+  padding: 0 10px;
+  border: none;
+  width: 90%;
+  font-size: 16px;
+}
+.AddToDo > input:focus {
+  outline: none;
+  border: 2px solid #fdaa32;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AddToDo > button {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #fad02c;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.AddToDo > button:hover{
+  color: whitesmoke;
+  background-color: green;
+  transition: all 0.3s ease-in-out;
+}
+.ToDoList {
+  list-style-type: none;
+  height: 400px;
+  width: 500px !important;
+  padding: 10px 0;
+  background-color: #bfd7ed;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.ToDoList li {
+  word-wrap: break-word;
+  padding: 10px;
+  background-color: #e9eaec;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.delete {
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete:hover {
+  color: red;
+  transition: all 0.3s ease-in-out;
+
 }

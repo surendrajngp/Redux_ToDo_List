@@ -9,8 +9,12 @@ const App = () => {
 
   return (
     <>
-      <AddToDo dispatch={dispatch} />
-      <ToDoList dispatch={dispatch} />
+      <div className="App">
+        <div className="ToDoApp">
+          <AddToDo dispatch={dispatch} />
+          <ToDoList dispatch={dispatch} />
+        </div>
+      </div>
     </>
   );
 };
